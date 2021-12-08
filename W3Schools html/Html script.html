@@ -1,0 +1,54 @@
+<!--then I decided to play a little with scripts while completing the task-->
+<!DOCTYPE html>
+<html>
+<head>
+<style type="">
+button{
+display:inline-block;
+height:50px;
+width:250px;
+}
+</style>
+	<title>	</title>
+</head>
+<body>
+<div class="navbar">	
+<button onclick="Helloworld()" id="hellobutton">change text</button>
+<button onclick="SizeButton()" id="SizeButton" >Size</button>
+<button onclick="color()" id="colorbutton">Colour</button>
+</div>
+<h1 id="MainText">WOW TEXT!</h1>
+
+
+
+<script type="">
+function Helloworld() {
+document.getElementById("MainText").innerHTML = "Hello World!";
+document.getElementById("hellobutton").onclick=function(){
+document.getElementById("MainText").innerHTML = "WOW TEXT!";
+document.getElementById("hellobutton").onclick=function(){
+return Helloworld();
+	}
+  }
+}
+function SizeButton() {
+document.getElementById("MainText").style.fontSize= "40px";
+document.getElementById("SizeButton").onclick=function(){
+document.getElementById("MainText").style.fontSize= "30px";
+document.getElementById("SizeButton").onclick=function(){
+return SizeButton();
+	}
+  }
+}
+function color() {
+document.getElementById("MainText").style.color= "red";
+document.getElementById("colorbutton").onclick=function(){
+document.getElementById("MainText").style.color= "black";
+document.getElementById("colorbutton").onclick=function(){
+return color();
+	}
+  }
+}
+</script>
+</body>
+</html>
